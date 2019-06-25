@@ -1,0 +1,13 @@
+$main-color: #2b2c3b;
+$font-family:'Hind';
+$font-header:'Hind';
+$back-image: url("../img/m-h-day.jpg");
+$back-color: white;
+$text-light-color: #b6c0ce;
+$gradient1: #66940F;
+$gradient2: #2E5DCF;
+$underline-color: #14A0C7;
+$footer-color: #2b2c3b;
+
+$header-font-map: (light: 600, dark: 500);
+$font-weight: map-get($header-font-map, light);

@@ -1,0 +1,198 @@
+body {
+  font-family: "Hind";
+  background-color: #21232E; }
+
+header {
+  background: url("../img/m-h-night.jpg");
+  background-size: cover;
+  width: auto;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom-right-radius: 400px; }
+
+.header-wrap {
+  margin: 0 150px;
+  padding-top: 20px; }
+
+.landing-logo {
+  color: white; }
+  .landing-logo p {
+    margin: 20px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    font-family: "Fresca"; }
+    .landing-logo p span {
+      display: block;
+      font-size: 10px;
+      line-height: 0;
+      width: 70px;
+      text-align: center; }
+  .landing-logo img {
+    float: left; }
+
+.header_heading {
+  font-size: 48px;
+  font-weight: bold;
+  width: 400px;
+  color: white;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  line-height: 50px;
+  position: relative;
+  z-index: 1; }
+  .header_heading:after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 20px;
+    background-color: #FF4E33;
+    position: absolute;
+    bottom: 4px;
+    z-index: -1; }
+
+.header_text {
+  font-size: 14px;
+  white-space: pre-line;
+  color: white; }
+
+button {
+  background-color: #DB9F08;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px; }
+
+.header_button {
+  margin: 80px 0 0 0; }
+
+main {
+  background-color: #21232E;
+  height: 700px; }
+
+.section_text {
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1; }
+  .section_text:before {
+    content: "";
+    width: 150px;
+    height: 10px;
+    background-color: #FF4E33;
+    position: absolute;
+    bottom: 15px;
+    margin-left: 180px;
+    z-index: -1; }
+
+.section_card_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.section_card {
+  background-color: #3B3F50;
+  border-radius: 5px;
+  width: 350px;
+  height: 400px;
+  margin: 10px; }
+
+.section_card_text {
+  color: #ffffe6;
+  text-align: center;
+  font-size: 14px;
+  padding: 0 15px; }
+
+.section_card_heading {
+  text-align: center;
+  color: #eef3f7;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  position: relative;
+  z-index: 1; }
+  .section_card_heading .section_card_underline {
+    position: absolute;
+    z-index: -1;
+    bottom: 5px;
+    left: 100px;
+    width: 150px;
+    height: 10px;
+    background-color: #FF4E33; }
+
+.section_card_img {
+  width: 330px;
+  height: auto;
+  padding: 10px 10px 0 10px; }
+
+.section_banner {
+  display: flex;
+  background: linear-gradient(to right, #DB9F08, #953150);
+  width: 600px;
+  height: 100px;
+  position: relative;
+  z-index: 2;
+  margin: 160px 400px;
+  padding: 5px 60px;
+  line-height: 12px;
+  border-radius: 5px; }
+
+.section_banner_heading {
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1; }
+  .section_banner_heading:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    left: 110px;
+    width: 50px;
+    height: 10px;
+    background-color: #FF4E33; }
+
+.section_banner_text {
+  color: #ffffe6;
+  font-size: 14px; }
+
+.section_banner_button {
+  margin-left: 80px;
+  margin-top: 20px; }
+
+footer {
+  background: #3B3F50;
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  z-index: 1; }
+  footer .footer-wrap {
+    display: flex;
+    flex-direction: row; }
+    footer .footer-wrap .footer_logo {
+      padding: 100px 120px; }
+
+.footer_logo.landing-logo p, .footer_logo.landing-logo p span {
+  color: #ffffe6; }
+
+.footer_text, .footer-cr {
+  color: #ffffe6; }
+
+.footer_text {
+  width: 300px;
+  font-size: 14px;
+  text-align: left;
+  padding: 100px 0 50px 250px; }
+
+.footer-cr {
+  padding: 130px 0 0 250px; }

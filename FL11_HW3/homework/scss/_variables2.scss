@@ -1,0 +1,14 @@
+$main-color: white;
+$font-family:'Hind';
+$font-header:'Fresca';
+$back-image: url("../img/m-h-night.jpg");
+$back-color: #21232E;
+$text-light-color: #ffffe6;
+$gradient1: #DB9F08;
+$gradient2: #953150;
+$underline-color: #FF4E33;
+$footer-color: #3B3F50;
+
+$header-font-map: (light: 600, dark: 500);
+$font-weight: map-get($header-font-map, dark);
+
