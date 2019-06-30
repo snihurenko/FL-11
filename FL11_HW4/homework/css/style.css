@@ -1,0 +1,290 @@
+@media(min-width: 900px){
+body{
+	font-family: 'Open Sans';
+	background-color: #F3F3F3;
+	width: 100%;
+	height: 100%;
+}
+header{
+	background-image: url("../img/sample2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width:100%;
+	color:white;
+}
+header:after{
+	content: '';
+	display: block;
+	height: 200px;
+	background: #000;
+	position: absolute;
+	width: 100%;
+	clip-path: polygon(100% 0, 0 0, 100% 100%);
+	z-index: -1;
+}
+.header{
+	height:900px;
+}
+h1{
+	font-size:64px;
+	font-weight:300;
+	letter-spacing: 10px;
+	text-align: center;
+	padding-top: 100px;
+}
+h1 span{
+	font-size:200%;
+}
+h1 + p{
+	font-size:18px;
+	text-align: center;
+}
+#black {
+	color:black;
+	width:30%;
+	float:left;
+	padding:50px;
+	padding: 40px 50px 0 50px;
+}
+#right-column{
+	width:40%;
+	float:right;
+	padding: 0 50px 0 50px;
+	color:white;
+	font-size:14px;
+}
+.top-container{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.register-button, .nav-button{
+	color:white;
+	background-color: transparent;
+}
+.nav-button{
+	border:2px solid white;
+	width:auto;
+	height:50px;
+	font-weight:300;
+	font-size:16px;
+	padding-left:70px;
+	padding-right:70px;
+	margin-top: 200px;
+}
+.register-button{
+	border:none;
+ 	float:right;
+ 	padding-left:40px;
+}
+.button-container{
+	display:flex;
+	justify-content: space-between;
+	padding: 0 60px;
+}
+nav {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+h2{
+	font-size:24px;
+	font-weight: 100;
+	text-align: center;
+	padding-top:200px;
+}
+
+.table{
+	display: flex;
+	margin:50px;
+	position:relative;
+
+}
+.right-column{
+	float:right;
+	flex:50%;
+	width:50%;
+	padding-top:0;
+
+}
+.left-column{
+	float:left;
+	flex:50%;
+	width:50%;
+}
+.column{
+	object-fit: cover;
+	width:50%;
+	height:350px;
+	position:relative;
+	display:inline-block;
+}
+div p{
+	padding:20px 50px;
+	text-align: center;
+}
+.left-note{
+	color:white;
+	position:absolute;
+	z-index:999;
+	top:40%;
+	left:5%;
+}
+.right-note{
+	color:white;
+	position:absolute;
+	z-index:999;
+	bottom:3%;
+	right:35%;
+}
+.like{
+	border:2px solid white;
+	background: rgb(64, 64, 64, 0.5);
+	padding: 5px 10px;
+	color:white;
+	position:absolute;
+}
+.like-left{
+	top:2%;
+	left:40%;
+}
+.like-right{
+	top:55%;
+	right:2%;
+}
+.news{
+	background-color: white;
+	width:100%;
+}
+.adds{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width:auto;
+}
+.adds img{
+	width: 270px;
+  	height: 330px;
+  	object-fit: cover;
+  	position: relative;
+  	margin:0 50px;
+}
+.add-box{
+	position: relative;
+	display:inline-block;
+}
+.add-box .explore{
+	position: absolute;
+	z-index:999;
+	margin: 0 auto;
+	left:0;
+	right:0;
+	width:60%;
+	top:50%;
+}
+.explore{
+	background-color: #097774;
+	opacity:0.9;
+	color:white;
+	border:none;
+	width:400px;
+	height:40px;
+	font-weight:700;
+	font-size:16px;
+}
+.add-box .like-adds{
+	position: absolute;
+	z-index:999;
+	left:65%;
+	top:5%;
+}
+.add-box .note-adds{
+	color:white;
+	position: absolute;
+	z-index:998;
+	left:10%;
+	bottom:0%;
+}
+#news-button{
+	background-color:#097774;
+	border: none;
+	color:white;
+	width:350px;
+	height:50px;
+	font-size:16px;
+	margin: 40px 40em;
+}
+
+.footer-text{
+	font-size: 14px;
+	text-align: left;
+	position: relative;
+}
+
+label{
+	font-size: 20px;
+	padding-right: 50px;
+}
+input{
+	background-color: transparent;
+	border:1px solid black;
+	width:150px;
+	height:35px;
+	
+}
+input::placeholder{
+	color:black;
+	padding-left: 10px;
+}
+.subscribe{
+	background-color:#097774;
+	border: none;
+	color:white;
+	width:80px;
+	height:38px;
+	margin-left:10px;
+}
+form{
+	float:right;
+	margin-right:40px;
+	margin-bottom:40px;
+}
+
+
+footer{
+	background-color: white;
+	clear:both;
+	position: relative;
+    height: 200px;
+    
+	width:100%;
+	height:50px;
+
+}
+ul{
+	display:flex;
+	list-style: none;
+	justify-content: flex-end;
+	margin-right:10px;
+	margin-top: -35px;
+}
+ul li a{
+	color: rgb(0, 0, 0, 0.9);
+	text-decoration: none;
+	padding: 10px;
+	font-size:14px;
+}
+
+footer>p{
+	color: #808080;
+	padding-top: 10px;
+}
+
+}
+
