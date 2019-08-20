@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #626262;
+    font-weight: 400;
+}
+/*settings*/
+.uppercase{
+    text-transform: uppercase;
+}
+.black{
+    color: #000;
+}
+.font14{
+    font-size: 14px;
+}
+.font16{
+    font-size: 16px;
+}
+.font30{
+    font-size: 30px;
+    font-weight: 400;
+}
+.btn{
+    cursor: pointer;
+}
+.btn:hover{
+    background: #e6e6e6;
+}
+a:hover{
+    text-decoration: underline;
+}
+/*margins*/
+.margin70{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.margin30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.margin-b-100{
+    margin-bottom: 100px;
+}
+.margin-l-70{
+    margin-left: 70px;
+}
+.margin-r-70{
+    margin-right: 70px;
+}
+/*flex settings*/
+.d-flex{
+    display: flex;
+}
+/*justify settings*/
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-center{
+    justify-content: center;
+}
+/*Paddings*/
+.p-3, 
+.py-3,
+.pt-3{
+    padding-top: 1rem;
+}
+.p-3,
+.px-3, 
+.pr-3{
+    padding-right: 1rem;
+}
+.p-3,
+.py-3, 
+.pb-3{
+    padding-bottom: 1rem;
+}
+.p-3,
+.px-3, 
+.pl-3{
+    padding-left: 1rem;
+}
+.p-4, 
+.py-4,
+.pt-4{
+    padding-top: 2.5rem;
+}
+.p-4,
+.px-4, 
+.pr-4{
+    padding-right: 2.5rem;
+}
+.p-4,
+.py-4, 
+.pb-4{
+    padding-bottom: 2.5rem;
+}
+.p-4,
+.px-4, 
+.pl-4{
+    padding-left: 2.5rem;
+}
+
+
+
+body{
+    font-family: 'Playfair Display', serif;
+    max-width: 1500px; 
+    margin: 0 auto;
+}
+/* Header*/
+header{
+    font-family: 'Inconsolata', monospace;
+    line-height: 24px;
+}
+ul{
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* main*/
+.first-item img{
+    width: 100%;
+}
+.news{
+    justify-content: space-around;
+}
+
+.news-item p{
+    width: 400px;
+}
+.label{
+    color: #bdb7aa;
+    
+}
+/* subscribe*/
+.subscribe{
+    background: #f0f0f0;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.subscribe h2{
+    letter-spacing: 0.75px;
+    color: #333;
+}
+.email{
+    border: none;
+    border-bottom: 2px solid #333;
+    background: #f0f0f0;
+    width: 300px;
+    line-height: 30px;
+}
+.email::placeholder{
+    color: #626262;
+}
+.submit{
+    border: none;
+    background: transparent;
+    transform: translate(260px,-30px);
+}
+
+/* /subscribe*/
+
+.load-more{
+    border: 1px solid #626262;
+    background: transparent;
+    padding: 20px 30px;
+    font-size: 20px;
+    line-height: 24px;  
+}
+
+/* Footer*/
+footer{
+    background: #f0f0f0;
+    height: 100px;
+    font-size: 14px;
+    margin-top: 400px;
+}
+.footer_nav{
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+@media screen and (max-width: 1024px){
+    .margin10{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .margin-l-70{
+        margin-left: 50px;
+    }
+    .margin-r-70{
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main_nav{
+        flex-direction: column;
+    }
+    .font16{
+        font-size: 18px;
+    }
+    .font14{
+        font-size: 16px;
+    }
+    .news{
+        flex-direction: column;
+    }
+    .margin-l-70, .margin-r-70, .first-item{
+        margin: 0 auto;
+    }
+    .margin-b-100{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .logo{
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-width: 320px){
+    
+    .margin70{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .f-wrap{
+        flex-wrap: wrap;
+    }
+    .logo{
+        margin-left: 70px;
+    }
+    .main_nav{
+        margin-left: 60px;
+    }
+    .main_nav li{
+        padding-bottom: 20px;
+    }
+    .font16{
+        font-size: 24px;
+        padding: 10px;
+    }
+    .font14{
+        font-size: 20px;
+    }
+    
+    .first-item img{
+        width: 410px;
+        margin: 0 auto;
+    }
+    p{
+        text-align: justify;
+    }
+    .subscribe{
+        width: 100%;
+        margin: 0;
+    }
+    .email::placeholder{
+        font-size: 18px;
+    }
+
+    .footer_nav{
+        flex-direction: column;
+    }
+    .black{
+        font-size: 18px;
+    }
+}
+
