@@ -28,9 +28,9 @@ var model = {
     shipLength: 3, //number of locations in each ship
     shipsSunk: 0,
 
-    ships: [{ locations: ["06", "16", "26"], hits: ["", "", ""] },
-            { locations: ["24", "34", "44"], hits: ["", "", ""] },
-            { locations: ["10", "11", "12"], hits: ["", "", ""] }],
+    ships: [ { locations: [0, 0, 0], hits: ["", "", ""] },
+             { locations: [0, 0, 0], hits: ["", "", ""] },
+             { locations: [0, 0, 0], hits: ["", "", ""] } ],
             
     fire: function(guess) {
         for (var i = 0; i < this.numShips; i++) {
@@ -64,6 +64,56 @@ var model = {
             }
         }
         return true;
+    }, 
+
+    generateShipLocations: function() {
+        var locations;
+        for (var i = 0; i < this.numShips; i++) {
+            do {
+                locations = this.generateShip(); //new set of locations
+            } while (this.collision(locations));    //check if there is overlap of ships
+                this.ships[i].locations = locations;
+        }
+    },
+
+    generateShip: function() {
+        var direction = Math.floor(Math.random() * 2);  //generate 1 - horizontal or 0 - vertical
+        var row, col;
+        if (direction === 1) {
+            //starting location for horizontal ship
+            row = Math.floor(Math.random() * this.boardSize);
+            col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+        } else {
+            //starting location for vertical ship
+            row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+            col = Math.floor(Math.random() * this.boardSize);
+        }
+        
+        var newShipLocations = [];
+        for (var i = 0; i < this.shipLength; i++) {
+            if (direction === 1) {
+                //adding locations to array
+                newShipLocations.push(row + "" + (col + i));
+            } else {
+                newShipLocations.push((row + i) + "" + col);
+            }
+        }
+        return newShipLocations;
+    },
+
+    collision: function(locations) {
+        //outer loop to iterate over all the ships in the model
+        //an inner loop to iterate over each of the locations checking for a collision.
+        for (var i = 0; i < this.numShips; i++) {   //iterate ships already on board
+            var ship = model.ships[i];
+
+            for (var j = 0; j < locations.length; j++) {
+                if (ship.locations.indexOf(locations[j]) >= 0) {    //check if there is overlap
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
 
@@ -77,6 +127,7 @@ var controller = {
     guesses: 0,
     processGuess: function(guess) {
         var location = parseGuess(guess);
+
         if (location){
             this.guesses++;
             var hit = model.fire(location);
@@ -91,6 +142,7 @@ var controller = {
 
 //get and process user input
 function parseGuess(guess) {
+    
     var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
     if (guess === null || guess.length !== 2) {
         alert("Oops, please enter a letter and a number on the board.");
@@ -111,7 +163,34 @@ function parseGuess(guess) {
     return null;
 }
 
-controller.processGuess("A0");
-controller.processGuess("A6");
-controller.processGuess("B6");
-controller.processGuess("C6");
+// controller.processGuess("A0");
+// controller.processGuess("A6");
+// controller.processGuess("B6");
+// controller.processGuess("C6");
+
+function handleFireButton() {
+    var guessInput = document.getElementById("guessInput");
+    var guess = guessInput.value;
+    controller.processGuess(guess);
+    guessInput.value = "";  //reset inpput field
+}
+
+function handleKeyPress(e) {
+    var fireButton = document.getElementById("fireButton");
+    if (e.keyCode === 13) {   // check for return key code
+        fireButton.click();
+        return false;
+    }
+}
+
+function init() {
+    var fireButton = document.getElementById("fireButton");
+    fireButton.onclick = handleFireButton;
+    
+    var guessInput = document.getElementById("guessInput");
+    guessInput.onkeypress = handleKeyPress;
+
+    model.generateShipLocations();
+}
+
+window.onload = init;
